@@ -4,5 +4,9 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "editor.inlayHints.enabled": "on"
+  "editor.inlayHints.enabled": "on",
+  "[prisma]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "Prisma.prisma"
+  }
 }
