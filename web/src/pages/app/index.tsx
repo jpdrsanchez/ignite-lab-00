@@ -1,9 +1,9 @@
-import { getSession } from '@auth0/nextjs-auth0';
-import { useUser } from '@auth0/nextjs-auth0/client';
-import { GetServerSideProps } from 'next';
+import { getSession } from '@auth0/nextjs-auth0'
+import { useUser } from '@auth0/nextjs-auth0/client'
+import { GetServerSideProps } from 'next'
 
 const AppPage = () => {
-  const user = useUser();
+  const user = useUser()
 
   return (
     <div>
@@ -14,24 +14,24 @@ const AppPage = () => {
         <a href="/api/auth/logout">Logout</a>
       </p>
     </div>
-  );
-};
+  )
+}
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const session = getSession(context.req, context.res);
+export const getServerSideProps: GetServerSideProps = async context => {
+  const session = getSession(context.req, context.res)
 
   if (!session) {
     return {
       redirect: {
         destination: '/api/auth/login',
-        permanent: false,
-      },
-    };
+        permanent: false
+      }
+    }
   }
 
   return {
-    props: {},
-  };
-};
+    props: {}
+  }
+}
 
-export default AppPage;
+export default AppPage
