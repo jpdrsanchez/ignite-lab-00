@@ -5,6 +5,7 @@
     "source.fixAll.eslint": true
   },
   "editor.inlayHints.enabled": "on",
+  "explorer.compactFolders": false,
   "[prisma]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "Prisma.prisma"
