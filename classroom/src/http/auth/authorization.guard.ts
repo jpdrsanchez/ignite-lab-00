@@ -31,6 +31,7 @@ export class AuthorizationGuard implements CanActivate {
 
     try {
       await checkJWTToken(req, res);
+
       return true;
     } catch (err) {
       throw new UnauthorizedException('Authentication failed', {
